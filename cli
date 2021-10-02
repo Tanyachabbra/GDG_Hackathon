@@ -1,0 +1,28 @@
+git config --global credential.helper \
+  'cache --timeout=172800'
+git config --global push.default current
+git config --global user.email "YOUR@EMAIL"
+git config --global user.name "YOUR NAME"
+
+
+export GITHUB_ORG=YOUR_GITHUB_ORG
+export GITHUB_REPO=YOUR_GITHUB_REPO
+
+
+cd ~/cloudshell-open/cloudbowl-microservice-game/samples/$SAMPLE
+git init
+git add .
+git commit -m init
+git remote add origin https://github.com/$GITHUB_ORG/$GITHUB_REPO.git
+git branch -M main
+
+# This will now ask for your GitHub username & password
+# for the password use the personal access token
+git push -u origin main
+
+
+git add .
+git status
+git diff --staged
+git commit -am "my changes"
+git push
