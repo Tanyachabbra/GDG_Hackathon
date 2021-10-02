@@ -1,8 +1,8 @@
 git config --global credential.helper \
   'cache --timeout=172800'
 git config --global push.default current
-git config --global user.email "YOUR@EMAIL"
-git config --global user.name "YOUR NAME"
+git config --global user.email "student-02-5176ac4dd31c@qwiklabs.net"
+git config --global user.name "qwiklabs-gcp-02-bfc1d6c27454"
 
 
 export GITHUB_ORG=YOUR_GITHUB_ORG
